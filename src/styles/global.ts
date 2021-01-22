@@ -5,6 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     outline: 0;
+    border: 0;
     text-decoration: none;
     box-sizing: border-box;
   }
@@ -29,7 +30,6 @@ export default createGlobalStyle`
   }
 
   button {
-    border: 0;
     cursor: pointer;
   }
 `;
