@@ -18,11 +18,13 @@ const SignIn: React.FC = () => {
 
   const handleSubmit = useCallback(async (data: object) => {
     try {
+      formRef.current?.setErrors({});
+
       const schema = Yup.object().shape({
         email: Yup.string()
           .required('O email é obrigatório')
           .email('Digite um email válido'),
-        password: Yup.string().min(6, 'Senha incorreta'),
+        password: Yup.string().required('Senha incorreta'),
       });
 
       await schema.validate(data, {
