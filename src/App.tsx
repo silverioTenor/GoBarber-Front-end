@@ -5,10 +5,14 @@ import SignIn from './pages/signIn';
 
 import GlobalStyle from './styles/global';
 
+import { AuthProvider } from './hooks/Auth';
+
 const App: React.FC = () => {
   return (
     <>
-      <SignIn />
+      <AuthProvider>
+        <SignIn />
+      </AuthProvider>
       <GlobalStyle />
     </>
   );
